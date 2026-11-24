@@ -7,9 +7,9 @@ config_version=5
 [application]
 
 config/name="Spot the Cheater"
-config/description="Сатирический менеджмент-симулятор преподавателя против списывающих студентов."
-run/main_scene="res://scenes/main_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/description="3D-симулятор преподавателя от первого лица: 15 студентов, лабораторная по программированию."
+; Главная сцена будет назначена после сборки 3D-класса (docs/GDD_3D.md §4)
+config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/bg_color=Color(0.1, 0.12, 0.14, 1)
 
 [display]
