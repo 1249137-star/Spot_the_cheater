@@ -11,6 +11,7 @@ extends CharacterBody3D
 @export var jump_velocity: float = 2.8
 @export var sit_distance: float = 1.0
 @export var stand_step: float = 0.8
+@export var cctv_distance: float = 3.0
 
 @onready var camera: Camera3D = $Camera3D
 @onready var ray: RayCast3D = $Camera3D/RayCast3D
@@ -41,6 +42,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			)
 	elif event.is_action_pressed("interact"):
 		_try_interact()
+	elif event.is_action_pressed("toggle_cctv"):
+		_toggle_cctv()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 		_try_interact()
 
@@ -78,6 +81,11 @@ func _try_interact() -> void:
 	if target == null:
 		return
 
+	if target.is_in_group("cctv_monitor"):
+		if target.has_method("interact"):
+			target.interact()
+		return
+
 	if not target.is_in_group("teacher_seat"):
 		print("[E] ", target.name)
 		return
@@ -96,6 +104,23 @@ func _try_interact() -> void:
 		return
 
 	_sit(sit_point.global_position)
+
+
+func _toggle_cctv() -> void:
+	var monitor := get_tree().get_first_node_in_group("cctv_monitor")
+	if monitor == null or not monitor.has_method("interact"):
+		return
+
+	var flat_distance := Vector2(
+		global_position.x - monitor.global_position.x,
+		global_position.z - monitor.global_position.z
+	).length()
+
+	if flat_distance > cctv_distance:
+		print("[CCTV] Слишком далеко: %.2f м" % flat_distance)
+		return
+
+	monitor.interact()
 
 
 func _sit(seat_position: Vector3) -> void:

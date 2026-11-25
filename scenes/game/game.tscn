@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7ohn4yixqnl0"]
+[gd_scene load_steps=8 format=3 uid="uid://b7ohn4yixqnl0"]
 
 [ext_resource type="PackedScene" uid="uid://bgqqeqq4pjgex" path="res://scenes/classroom_blockout.tscn" id="1_classroom"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2_player"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/ui/timer_label.gd" id="4_timer_label"]
 [ext_resource type="PackedScene" path="res://scenes/ui/pause_menu.tscn" id="5_pause_menu"]
 [ext_resource type="Script" path="res://scripts/ui/crosshair.gd" id="6_crosshair"]
+[ext_resource type="PackedScene" path="res://scenes/props/teacher_cctv_monitor.tscn" id="7_cctv_monitor"]
 
 [node name="Game" type="Node3D"]
 
@@ -16,6 +17,9 @@ script = ExtResource("3_game_session")
 
 [node name="Player" parent="." instance=ExtResource("2_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 5)
+
+[node name="TeacherCCTV" parent="." instance=ExtResource("7_cctv_monitor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, 1.6785)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
