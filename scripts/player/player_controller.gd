@@ -115,15 +115,15 @@ func _try_sit(target: Node) -> void:
 
 func _toggle_cctv() -> void:
 	var overlay := get_tree().get_first_node_in_group("cctv_overlay")
-	var monitor := get_tree().get_first_node_in_group("cctv_monitor")
-
-	if overlay != null and overlay.is_open:
-		overlay.close()
-		if monitor != null and monitor.has_method("set_open"):
-			monitor.set_open(false)
+	if overlay == null or not overlay.has_method("open"):
 		return
 
-	if monitor == null or not monitor.has_method("set_open"):
+	if overlay.is_open:
+		overlay.close()
+		return
+
+	var monitor := get_tree().get_first_node_in_group("cctv_monitor")
+	if monitor == null:
 		return
 
 	var flat_distance := Vector2(
@@ -132,10 +132,10 @@ func _toggle_cctv() -> void:
 	).length()
 
 	if flat_distance > cctv_distance:
-		print("[CCTV] Слишком далеко: %.2f м" % flat_distance)
+		print("[ПК] Слишком далеко: %.2f м" % flat_distance)
 		return
 
-	monitor.set_open(not monitor.is_open)
+	overlay.open()
 
 
 func _on_right_click() -> void:
@@ -145,7 +145,7 @@ func _on_right_click() -> void:
 		var target := ray.get_collider()
 		if target != null:
 			if target.is_in_group("cctv_monitor"):
-				_open_cctv(target)
+				_open_cctv()
 				return
 			if not _is_seated and target.is_in_group("teacher_seat"):
 				_try_sit(target)
@@ -155,10 +155,7 @@ func _on_right_click() -> void:
 		_stand()
 
 
-func _open_cctv(monitor: Node) -> void:
-	if monitor.has_method("set_open"):
-		monitor.set_open(true)
-
+func _open_cctv() -> void:
 	var overlay := get_tree().get_first_node_in_group("cctv_overlay")
 	if overlay != null and overlay.has_method("open"):
 		overlay.open()

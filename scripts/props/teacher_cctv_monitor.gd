@@ -1,13 +1,12 @@
 extends StaticBody3D
 
-## Монитор преподавателя с сеткой CCTV 3×5.
+## Монитор преподавателя с рабочим столом ПК.
 ## Картинка рисуется в SubViewport и выводится на экран 3D-модели.
-## Открывается и закрывается взаимодействием (E / ПКМ) или клавишей C.
+## Окно CCTV открывается и закрывается клавишей C.
 
 @onready var viewport: SubViewport = $SubViewport
 @onready var screen: MeshInstance3D = $Screen
-@onready var feed: Control = $SubViewport/CCTVFeed
-@onready var standby: Control = $SubViewport/Standby
+@onready var desktop: Control = $SubViewport/Desktop
 
 var is_open: bool = false
 
@@ -22,6 +21,5 @@ func _ready() -> void:
 
 func set_open(value: bool) -> void:
 	is_open = value
-	feed.visible = value
-	standby.visible = not value
+	desktop.show_cctv(value)
 	print("[CCTV] %s" % ("открыт" if value else "закрыт"))
