@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bgqqeqq4pjgex"]
+[gd_scene load_steps=54 format=3 uid="uid://bgqqeqq4pjgex"]
 
 [sub_resource type="StandardMaterial3D" id="Mat_floor"]
 albedo_color = Color(0.78, 0.63, 0.45, 1)
@@ -35,12 +35,6 @@ roughness = 0.85
 [sub_resource type="BoxMesh" id="Mesh_handle"]
 size = Vector3(0.06, 0.04, 0.16)
 
-[sub_resource type="BoxMesh" id="Mesh_mouse_long"]
-size = Vector3(0.06, 0.03, 0.1)
-
-[sub_resource type="BoxMesh" id="Mesh_mouse_side"]
-size = Vector3(0.1, 0.03, 0.06)
-
 [sub_resource type="StandardMaterial3D" id="Mat_window"]
 albedo_color = Color(0.62, 0.72, 0.78, 1)
 roughness = 0.85
@@ -61,14 +55,6 @@ roughness = 0.85
 [sub_resource type="BoxMesh" id="Mesh_board"]
 size = Vector3(4, 1.2, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="Mat_desk"]
-albedo_color = Color(0.72, 0.52, 0.32, 1)
-roughness = 0.85
-
-[sub_resource type="StandardMaterial3D" id="Mat_monitor"]
-albedo_color = Color(0.03, 0.03, 0.04, 1)
-roughness = 0.85
-
 [sub_resource type="StandardMaterial3D" id="Mat_keyboard"]
 albedo_color = Color(0.1, 0.1, 0.11, 1)
 roughness = 0.85
@@ -80,65 +66,52 @@ size = Vector3(0.45, 0.02, 0.15)
 albedo_color = Color(0.06, 0.06, 0.07, 1)
 roughness = 0.85
 
-[sub_resource type="BoxMesh" id="Mesh_keyboard_side"]
-size = Vector3(0.15, 0.02, 0.45)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_top_long"]
-size = Vector3(1.4, 0.04, 0.7)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_top_side"]
-size = Vector3(0.7, 0.04, 1.4)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_top_teacher"]
-size = Vector3(2, 0.04, 0.9)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_panel_long"]
-size = Vector3(0.04, 0.71, 0.66)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_panel_side"]
-size = Vector3(0.66, 0.71, 0.04)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_panel_teacher"]
-size = Vector3(0.04, 0.71, 0.86)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_modesty_long"]
-size = Vector3(1.32, 0.35, 0.02)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_modesty_side"]
-size = Vector3(0.02, 0.35, 1.32)
-
-[sub_resource type="BoxMesh" id="Mesh_desk_modesty_teacher"]
-size = Vector3(1.92, 0.35, 0.02)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_screen_long"]
-size = Vector3(0.55, 0.33, 0.03)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_screen_side"]
-size = Vector3(0.03, 0.33, 0.55)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_bezel_long"]
-size = Vector3(0.57, 0.35, 0.02)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_bezel_side"]
-size = Vector3(0.02, 0.35, 0.57)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_neck"]
-size = Vector3(0.05, 0.18, 0.05)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_base_long"]
-size = Vector3(0.22, 0.02, 0.16)
-
-[sub_resource type="BoxMesh" id="Mesh_mon_base_side"]
-size = Vector3(0.16, 0.02, 0.22)
-
 [sub_resource type="BoxMesh" id="Mesh_chair_seat2"]
 size = Vector3(0.48, 0.08, 0.48)
 
 [sub_resource type="BoxMesh" id="Mesh_chair_back2_long"]
 size = Vector3(0.46, 0.55, 0.06)
 
+[sub_resource type="BoxMesh" id="Mesh_keyboard_side"]
+size = Vector3(0.15, 0.02, 0.45)
+
 [sub_resource type="BoxMesh" id="Mesh_chair_back2_side"]
 size = Vector3(0.06, 0.55, 0.46)
+
+[sub_resource type="StandardMaterial3D" id="Mat_monitor"]
+albedo_color = Color(0.03, 0.03, 0.04, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="Mesh_mouse_long"]
+size = Vector3(0.06, 0.03, 0.1)
+
+[sub_resource type="BoxMesh" id="Mesh_mouse_side"]
+size = Vector3(0.1, 0.03, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="Mat_desk"]
+albedo_color = Color(0.72, 0.52, 0.32, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="Mesh_desk_top_long"]
+size = Vector3(1.4, 0.04, 0.7)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_panel_long"]
+size = Vector3(0.04, 0.71, 0.66)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_modesty_long"]
+size = Vector3(1.32, 0.35, 0.02)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_screen_long"]
+size = Vector3(0.55, 0.33, 0.03)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_bezel_long"]
+size = Vector3(0.57, 0.35, 0.02)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_neck"]
+size = Vector3(0.05, 0.18, 0.05)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_base_long"]
+size = Vector3(0.22, 0.02, 0.16)
 
 [sub_resource type="CylinderMesh" id="Mesh_chair_base"]
 top_radius = 0.28
@@ -152,12 +125,60 @@ bottom_radius = 0.04
 height = 0.35
 radial_segments = 16
 
+[sub_resource type="BoxMesh" id="Mesh_desk_top_side"]
+size = Vector3(0.7, 0.04, 1.4)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_panel_side"]
+size = Vector3(0.66, 0.71, 0.04)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_modesty_side"]
+size = Vector3(0.02, 0.35, 1.32)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_screen_side"]
+size = Vector3(0.03, 0.33, 0.55)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_bezel_side"]
+size = Vector3(0.02, 0.35, 0.57)
+
+[sub_resource type="BoxMesh" id="Mesh_mon_base_side"]
+size = Vector3(0.16, 0.02, 0.22)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_top_teacher"]
+size = Vector3(2, 0.04, 0.9)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_panel_teacher"]
+size = Vector3(0.04, 0.71, 0.86)
+
+[sub_resource type="BoxMesh" id="Mesh_desk_modesty_teacher"]
+size = Vector3(1.92, 0.35, 0.02)
+
+[sub_resource type="BoxShape3D" id="Shape_teacher_seat"]
+size = Vector3(0.7, 1, 0.7)
+
 [sub_resource type="Environment" id="Env"]
 background_mode = 1
 background_color = Color(0.05, 0.06, 0.08, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.85, 0.8, 0.7, 1)
 ambient_light_energy = 0.45
+
+[sub_resource type="BoxShape3D" id="Shape_floor"]
+size = Vector3(10, 0.1, 12)
+
+[sub_resource type="BoxShape3D" id="Shape_wall_long"]
+size = Vector3(10, 3, 0.1)
+
+[sub_resource type="BoxShape3D" id="Shape_wall_side"]
+size = Vector3(0.1, 3, 12)
+
+[sub_resource type="BoxShape3D" id="Shape_desk_long"]
+size = Vector3(1.4, 0.75, 0.7)
+
+[sub_resource type="BoxShape3D" id="Shape_desk_side"]
+size = Vector3(0.7, 0.75, 1.4)
+
+[sub_resource type="BoxShape3D" id="Shape_desk_teacher"]
+size = Vector3(2, 0.75, 0.9)
 
 [node name="ClassroomBlockout" type="Node3D"]
 
@@ -470,41 +491,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0.75, 0.72)
 material_override = SubResource("Mat_chair")
 mesh = SubResource("Mesh_chair_back2_side")
 
-[node name="Teacher" type="Node3D" parent="."]
-
-[node name="TeacherKeyboard" type="MeshInstance3D" parent="Teacher"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76, 2.06258)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_keyboard_long")
-
-[node name="TeacherChair" type="MeshInstance3D" parent="Teacher"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42, 2.51258)
-material_override = SubResource("Mat_chair")
-mesh = SubResource("Mesh_chair_seat2")
-
-[node name="TeacherChairBack" type="MeshInstance3D" parent="Teacher"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 2.76258)
-material_override = SubResource("Mat_chair")
-mesh = SubResource("Mesh_chair_back2_long")
-
-[node name="Lighting" type="Node3D" parent="."]
-
-[node name="Sun" type="DirectionalLight3D" parent="Lighting"]
-transform = Transform3D(-4.37114e-08, -0.866025, 0.5, 0, 0.5, 0.866025, -1, 3.78552e-08, -2.18557e-08, 0, 0, 0)
-
-[node name="Fill" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, 0)
-light_energy = 0.6
-omni_range = 14.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Env")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.866025, 0.137819, -0.480631, 0, 0.961262, 0.275637, 0.5, 0.238709, -0.832477, -3.6, 2.6, -4.6)
-current = true
-fov = 80.0
-
 [node name="Mouse_T1" type="MeshInstance3D" parent="Desks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0.765, -5.35)
 material_override = SubResource("Mat_monitor")
@@ -580,648 +566,940 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.765, 0.42)
 material_override = SubResource("Mat_monitor")
 mesh = SubResource("Mesh_mouse_side")
 
+[node name="DeskTop_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.73, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_long")
+
+[node name="DeskSideA_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68, 0.355, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_long")
+
+[node name="DeskSideB_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32, 0.355, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_long")
+
+[node name="DeskModesty_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.45, -5.85)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_long")
+
+[node name="MonitorScreen_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.12, -5.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_long")
+
+[node name="MonitorBezel_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.12, -5.82)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_long")
+
+[node name="MonitorNeck_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.87, -5.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.76, -5.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_long")
+
+[node name="ChairBase_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.015, -4.9)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_T1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.205, -4.9)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_long")
+
+[node name="DeskSideA_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.68, 0.355, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_long")
+
+[node name="DeskSideB_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68, 0.355, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_long")
+
+[node name="DeskModesty_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, -5.85)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_long")
+
+[node name="MonitorScreen_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, -5.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_long")
+
+[node name="MonitorBezel_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, -5.82)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_long")
+
+[node name="MonitorNeck_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87, -5.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76, -5.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_long")
+
+[node name="ChairBase_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, -4.9)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_T2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, -4.9)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.73, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_long")
+
+[node name="DeskSideA_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32, 0.355, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_long")
+
+[node name="DeskSideB_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68, 0.355, -5.55)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_long")
+
+[node name="DeskModesty_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.45, -5.85)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_long")
+
+[node name="MonitorScreen_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.12, -5.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_long")
+
+[node name="MonitorBezel_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.12, -5.82)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_long")
+
+[node name="MonitorNeck_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.87, -5.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.76, -5.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_long")
+
+[node name="ChairBase_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.015, -4.9)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_T3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.205, -4.9)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, -4.2)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -4.88)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -3.52)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, -4.2)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, -4.2)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, -4.2)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_L1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, -1.8)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -2.48)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -1.12)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, -1.8)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, -1.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, -1.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_L2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, 0.6)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -0.08)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, 1.28)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, 0.6)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, 0.6)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, 0.6)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_L3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, 3)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, 2.32)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, 3.68)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, 3)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, 3)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, 3)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, 3)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, 3)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, 3)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_L4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, 3)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.73, -4.2)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -4.88)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -3.52)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 0.45, -4.2)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 1.12, -4.2)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 1.12, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.87, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.76, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.015, -4.2)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_R1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.205, -4.2)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.73, -1.8)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -2.48)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -1.12)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 0.45, -1.8)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 1.12, -1.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 1.12, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.87, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.76, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.015, -1.8)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_R2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.205, -1.8)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.73, 0.6)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -0.08)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, 1.28)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 0.45, 0.6)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 1.12, 0.6)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 1.12, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.87, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.76, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.015, 0.6)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_R3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.205, 0.6)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.73, 3.8744)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.355, 3.1944)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.355, 4.5544)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77744, 0.45, 3.8744)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72744, 1.12, 3.8744)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74744, 1.12, 3.8744)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72744, 0.87, 3.8744)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72744, 0.76, 3.8744)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.82744, 0.015, 3.8744)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_R4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.82744, 0.205, 3.8744)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.73, -0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, -1.4)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, -0.04)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.45, -0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.12, -0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, 1.12, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.87, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.76, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.015, -0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_C1" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.205, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.73, 0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, 0.04)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, 1.4)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.45, 0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.12, 0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, 1.12, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.87, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.76, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.015, 0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_C2" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.205, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.73, -0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, -1.4)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, -0.04)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.45, -0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.12, -0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13, 1.12, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.87, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.76, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.015, -0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_C3" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.205, -0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="DeskTop_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.73, 0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_top_side")
+
+[node name="DeskSideA_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, 0.04)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskSideB_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, 1.4)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_panel_side")
+
+[node name="DeskModesty_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.45, 0.72)
+material_override = SubResource("Mat_desk")
+mesh = SubResource("Mesh_desk_modesty_side")
+
+[node name="MonitorScreen_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.12, 0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_mon_screen_side")
+
+[node name="MonitorBezel_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13, 1.12, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_bezel_side")
+
+[node name="MonitorNeck_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.87, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_neck")
+
+[node name="MonitorBase_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.76, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_mon_base_side")
+
+[node name="ChairBase_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.015, 0.72)
+material_override = SubResource("Mat_monitor")
+mesh = SubResource("Mesh_chair_base")
+
+[node name="ChairColumn_C4" type="MeshInstance3D" parent="Desks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.205, 0.72)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_chair_column")
+
+[node name="Teacher" type="Node3D" parent="."]
+
+[node name="TeacherKeyboard" type="MeshInstance3D" parent="Teacher"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76, 2.06258)
+material_override = SubResource("Mat_keyboard")
+mesh = SubResource("Mesh_keyboard_long")
+
+[node name="TeacherChair" type="MeshInstance3D" parent="Teacher"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42, 2.51258)
+material_override = SubResource("Mat_chair")
+mesh = SubResource("Mesh_chair_seat2")
+
+[node name="TeacherChairBack" type="MeshInstance3D" parent="Teacher"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 2.76258)
+material_override = SubResource("Mat_chair")
+mesh = SubResource("Mesh_chair_back2_long")
+
 [node name="TeacherMouse" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.765, 2.06258)
 material_override = SubResource("Mat_monitor")
 mesh = SubResource("Mesh_mouse_long")
 
-[node name="DeskTop_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.73, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_long")
-[node name="DeskSideA_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68, 0.355, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_long")
-[node name="DeskSideB_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32, 0.355, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_long")
-[node name="DeskModesty_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.45, -5.85)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_long")
-[node name="MonitorScreen_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.12, -5.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_long")
-[node name="MonitorBezel_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.12, -5.82)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_long")
-[node name="MonitorNeck_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.87, -5.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.76, -5.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_long")
-[node name="ChairBase_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.015, -4.9)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_T1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.205, -4.9)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_long")
-[node name="DeskSideA_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.68, 0.355, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_long")
-[node name="DeskSideB_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68, 0.355, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_long")
-[node name="DeskModesty_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, -5.85)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_long")
-[node name="MonitorScreen_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, -5.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_long")
-[node name="MonitorBezel_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, -5.82)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_long")
-[node name="MonitorNeck_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87, -5.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76, -5.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_long")
-[node name="ChairBase_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, -4.9)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_T2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, -4.9)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.73, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_long")
-[node name="DeskSideA_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32, 0.355, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_long")
-[node name="DeskSideB_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68, 0.355, -5.55)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_long")
-[node name="DeskModesty_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.45, -5.85)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_long")
-[node name="MonitorScreen_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.12, -5.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_long")
-[node name="MonitorBezel_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.12, -5.82)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_long")
-[node name="MonitorNeck_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.87, -5.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.76, -5.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_long")
-[node name="ChairBase_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.015, -4.9)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_T3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.205, -4.9)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, -4.2)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -4.88)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -3.52)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, -4.2)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, -4.2)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, -4.2)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_L1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, -1.8)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -2.48)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -1.12)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, -1.8)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, -1.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, -1.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_L2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, 0.6)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, -0.08)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, 1.28)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, 0.6)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, 0.6)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, 0.6)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_L3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.73, 3)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, 2.32)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.355, 3.68)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85, 0.45, 3)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 1.12, 3)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 1.12, 3)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.87, 3)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0.76, 3)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.015, 3)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_L4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.205, 3)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.73, -4.2)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -4.88)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -3.52)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 0.45, -4.2)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 1.12, -4.2)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 1.12, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.87, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.76, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.015, -4.2)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_R1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.205, -4.2)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.73, -1.8)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -2.48)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -1.12)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 0.45, -1.8)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 1.12, -1.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 1.12, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.87, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.76, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.015, -1.8)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_R2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.205, -1.8)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.73, 0.6)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, -0.08)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.355, 1.28)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 0.45, 0.6)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 1.12, 0.6)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 1.12, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.87, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0.76, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.015, 0.6)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_R3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.205, 0.6)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.73, 3.8744)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.355, 3.1944)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.355, 4.5544)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77744, 0.45, 3.8744)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72744, 1.12, 3.8744)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74744, 1.12, 3.8744)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72744, 0.87, 3.8744)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72744, 0.76, 3.8744)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.82744, 0.015, 3.8744)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_R4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.82744, 0.205, 3.8744)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.73, -0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, -1.4)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, -0.04)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.45, -0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.12, -0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, 1.12, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.87, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.76, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.015, -0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_C1" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.205, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.73, 0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, 0.04)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.355, 1.4)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.45, 0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 1.12, 0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, 1.12, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.87, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.76, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.015, 0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_C2" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.205, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.73, -0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, -1.4)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, -0.04)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.45, -0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.12, -0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13, 1.12, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.87, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.76, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.015, -0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_C3" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.205, -0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
-[node name="DeskTop_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.73, 0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_top_side")
-[node name="DeskSideA_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, 0.04)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskSideB_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.355, 1.4)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_panel_side")
-[node name="DeskModesty_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.45, 0.72)
-material_override = SubResource("Mat_desk")
-mesh = SubResource("Mesh_desk_modesty_side")
-[node name="MonitorScreen_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.12, 0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_mon_screen_side")
-[node name="MonitorBezel_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13, 1.12, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_bezel_side")
-[node name="MonitorNeck_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.87, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_neck")
-[node name="MonitorBase_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.76, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_mon_base_side")
-[node name="ChairBase_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.015, 0.72)
-material_override = SubResource("Mat_monitor")
-mesh = SubResource("Mesh_chair_base")
-[node name="ChairColumn_C4" type="MeshInstance3D" parent="Desks"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0.205, 0.72)
-material_override = SubResource("Mat_keyboard")
-mesh = SubResource("Mesh_chair_column")
 [node name="DeskTop_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73, 1.91258)
 material_override = SubResource("Mat_desk")
 mesh = SubResource("Mesh_desk_top_teacher")
+
 [node name="DeskSideA_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.98, 0.355, 1.91258)
 material_override = SubResource("Mat_desk")
 mesh = SubResource("Mesh_desk_panel_teacher")
+
 [node name="DeskSideB_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98, 0.355, 1.91258)
 material_override = SubResource("Mat_desk")
 mesh = SubResource("Mesh_desk_panel_teacher")
+
 [node name="DeskModesty_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 1.51258)
 material_override = SubResource("Mat_desk")
 mesh = SubResource("Mesh_desk_modesty_teacher")
+
 [node name="MonitorScreen_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, 1.66258)
 material_override = SubResource("Mat_monitor")
 mesh = SubResource("Mesh_mon_screen_long")
+
 [node name="MonitorBezel_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12, 1.64258)
 material_override = SubResource("Mat_keyboard")
 mesh = SubResource("Mesh_mon_bezel_long")
+
 [node name="MonitorNeck_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87, 1.66258)
 material_override = SubResource("Mat_keyboard")
 mesh = SubResource("Mesh_mon_neck")
+
 [node name="MonitorBase_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76, 1.66258)
 material_override = SubResource("Mat_keyboard")
 mesh = SubResource("Mesh_mon_base_long")
+
 [node name="ChairBase_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.015, 2.51258)
 material_override = SubResource("Mat_monitor")
 mesh = SubResource("Mesh_chair_base")
+
 [node name="ChairColumn_Teacher" type="MeshInstance3D" parent="Teacher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, 2.51258)
 material_override = SubResource("Mat_keyboard")
 mesh = SubResource("Mesh_chair_column")
+
+[node name="TeacherSeat" type="StaticBody3D" parent="Teacher" groups=["teacher_seat"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 2.51258)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teacher/TeacherSeat"]
+shape = SubResource("Shape_teacher_seat")
+
+[node name="SitPoint" type="Marker3D" parent="Teacher/TeacherSeat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-4.37114e-08, -0.866025, 0.5, 0, 0.5, 0.866025, -1, 3.78552e-08, -2.18557e-08, 0, 0, 0)
+
+[node name="Fill" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, 0)
+light_energy = 0.6
+omni_range = 14.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.866025, 0.137819, -0.480631, 0, 0.961262, 0.275637, 0.5, 0.238709, -0.832477, -3.6, 2.6, -4.6)
+fov = 80.0
+
+[node name="RoomCollision" type="StaticBody3D" parent="."]
+
+[node name="FloorShape" type="CollisionShape3D" parent="RoomCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+shape = SubResource("Shape_floor")
+
+[node name="WallTopShape" type="CollisionShape3D" parent="RoomCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6.05)
+shape = SubResource("Shape_wall_long")
+
+[node name="WallBottomShape" type="CollisionShape3D" parent="RoomCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6.05)
+shape = SubResource("Shape_wall_long")
+
+[node name="WallLeftShape" type="CollisionShape3D" parent="RoomCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.05, 1.5, 0)
+shape = SubResource("Shape_wall_side")
+
+[node name="WallRightShape" type="CollisionShape3D" parent="RoomCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05, 1.5, 0)
+shape = SubResource("Shape_wall_side")
+
+[node name="DeskCollision" type="StaticBody3D" parent="."]
+
+[node name="Desk_T1" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.375, -5.55)
+shape = SubResource("Shape_desk_long")
+
+[node name="Desk_T2" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, -5.55)
+shape = SubResource("Shape_desk_long")
+
+[node name="Desk_T3" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.375, -5.55)
+shape = SubResource("Shape_desk_long")
+
+[node name="Desk_L1" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.375, -4.2)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_L2" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.375, -1.8)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_L3" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.375, 0.6)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_L4" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55, 0.375, 3)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_R1" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.375, -4.2)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_R2" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.375, -1.8)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_R3" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.55, 0.375, 0.6)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_R4" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47744, 0.375, 3.8744)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_C1" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.375, -0.72)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_C2" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.375, 0.72)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_C3" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.375, -0.72)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_C4" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0.375, 0.72)
+shape = SubResource("Shape_desk_side")
+
+[node name="Desk_Teacher" type="CollisionShape3D" parent="DeskCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 1.91258)
+shape = SubResource("Shape_desk_teacher")

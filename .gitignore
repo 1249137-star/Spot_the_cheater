@@ -19,3 +19,6 @@ bin/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Local notes
+/заметка о проекте.txt
