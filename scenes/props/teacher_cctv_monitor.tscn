@@ -77,5 +77,5 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6, 0.72, 0.82, 1)
 theme_override_font_sizes/font_size = 20
-text = "E или C — открыть"
+text = "ПКМ – открыть · C – вкл/выкл"
 horizontal_alignment = 1

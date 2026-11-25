@@ -48,10 +48,10 @@ func _on_play_pressed() -> void:
 
 
 func _on_main_menu_pressed() -> void:
-	status_label.text = "Главное меню — заглушка"
-	print("[Пауза] Главное меню — заглушка")
+	status_label.text = "Главное меню – заглушка"
+	print("[Пауза] Главное меню – заглушка")
 
 
 func _on_settings_pressed() -> void:
-	status_label.text = "Настройки — заглушка"
-	print("[Пауза] Настройки — заглушка")
+	status_label.text = "Настройки – заглушка"
+	print("[Пауза] Настройки – заглушка")

@@ -20,6 +20,7 @@ var _is_seated: bool = false
 var _seat_yaw: float = 0.0
 var _seat_pitch: float = 0.0
 var _saved_camera_position: Vector3 = Vector3.ZERO
+var _controls_enabled: bool = true
 
 
 func _ready() -> void:
@@ -27,6 +28,9 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not _controls_enabled:
+		return
+
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if _is_seated:
 			_seat_yaw -= event.relative.x * mouse_sensitivity
@@ -45,10 +49,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("toggle_cctv"):
 		_toggle_cctv()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-		_try_interact()
+		_on_right_click()
 
 
 func _physics_process(delta: float) -> void:
+	if not _controls_enabled:
+		velocity = Vector3.ZERO
+		return
+
 	if _is_seated:
 		velocity = Vector3.ZERO
 		return
@@ -81,15 +89,14 @@ func _try_interact() -> void:
 	if target == null:
 		return
 
-	if target.is_in_group("cctv_monitor"):
-		if target.has_method("interact"):
-			target.interact()
+	if target.is_in_group("teacher_seat"):
+		_try_sit(target)
 		return
 
-	if not target.is_in_group("teacher_seat"):
-		print("[E] ", target.name)
-		return
+	print("[E] ", target.name)
 
+
+func _try_sit(target: Node) -> void:
 	var flat_distance := Vector2(
 		global_position.x - target.global_position.x,
 		global_position.z - target.global_position.z
@@ -107,8 +114,16 @@ func _try_interact() -> void:
 
 
 func _toggle_cctv() -> void:
+	var overlay := get_tree().get_first_node_in_group("cctv_overlay")
 	var monitor := get_tree().get_first_node_in_group("cctv_monitor")
-	if monitor == null or not monitor.has_method("interact"):
+
+	if overlay != null and overlay.is_open:
+		overlay.close()
+		if monitor != null and monitor.has_method("set_open"):
+			monitor.set_open(false)
+		return
+
+	if monitor == null or not monitor.has_method("set_open"):
 		return
 
 	var flat_distance := Vector2(
@@ -120,7 +135,40 @@ func _toggle_cctv() -> void:
 		print("[CCTV] Слишком далеко: %.2f м" % flat_distance)
 		return
 
-	monitor.interact()
+	monitor.set_open(not monitor.is_open)
+
+
+func _on_right_click() -> void:
+	ray.force_raycast_update()
+
+	if ray.is_colliding():
+		var target := ray.get_collider()
+		if target != null:
+			if target.is_in_group("cctv_monitor"):
+				_open_cctv(target)
+				return
+			if not _is_seated and target.is_in_group("teacher_seat"):
+				_try_sit(target)
+				return
+
+	if _is_seated:
+		_stand()
+
+
+func _open_cctv(monitor: Node) -> void:
+	if monitor.has_method("set_open"):
+		monitor.set_open(true)
+
+	var overlay := get_tree().get_first_node_in_group("cctv_overlay")
+	if overlay != null and overlay.has_method("open"):
+		overlay.open()
+
+
+func set_controls_enabled(value: bool) -> void:
+	_controls_enabled = value
+	if not value:
+		velocity = Vector3.ZERO
+	print("[Игрок] управление %s" % ("включено" if value else "выключено"))
 
 
 func _sit(seat_position: Vector3) -> void:
