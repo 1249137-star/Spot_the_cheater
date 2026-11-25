@@ -13,6 +13,8 @@ extends CharacterBody3D
 @onready var ray: RayCast3D = $Camera3D/RayCast3D
 
 var _is_seated: bool = false
+var _seat_yaw: float = 0.0
+var _seat_pitch: float = 0.0
 var _saved_player_rotation: Vector3 = Vector3.ZERO
 var _saved_camera_position: Vector3 = Vector3.ZERO
 var _saved_camera_rotation: Vector3 = Vector3.ZERO
@@ -25,13 +27,17 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if _is_seated:
-			camera.rotate_y(-event.relative.x * mouse_sensitivity)
-			camera.rotate_x(-event.relative.y * mouse_sensitivity)
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80.0), deg_to_rad(80.0))
+			_seat_yaw -= event.relative.x * mouse_sensitivity
+			_seat_pitch -= event.relative.y * mouse_sensitivity
+			_seat_pitch = clamp(_seat_pitch, deg_to_rad(-80.0), deg_to_rad(80.0))
+			camera.rotation = Vector3(_seat_pitch, _seat_yaw, 0.0)
 		else:
 			rotate_y(-event.relative.x * mouse_sensitivity)
-			camera.rotate_x(-event.relative.y * mouse_sensitivity)
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80.0), deg_to_rad(80.0))
+			camera.rotation.x = clamp(
+				camera.rotation.x - event.relative.y * mouse_sensitivity,
+				deg_to_rad(-80.0),
+				deg_to_rad(80.0)
+			)
 	elif event.is_action_pressed("interact"):
 		_try_interact()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
@@ -94,6 +100,8 @@ func _sit(seat_position: Vector3) -> void:
 	_is_seated = true
 	velocity = Vector3.ZERO
 	rotation = Vector3.ZERO
+	_seat_yaw = 0.0
+	_seat_pitch = 0.0
 
 	camera.global_position = seat_position
 	camera.rotation = Vector3.ZERO
