@@ -25,7 +25,7 @@ func _ready() -> void:
 	visible = false
 	_player = get_tree().get_first_node_in_group("player")
 	dim.gui_input.connect(_on_dim_gui_input)
-	desktop.cctv_toggled.connect(_on_desktop_cctv_toggled)
+	desktop.app_changed.connect(_on_desktop_app_changed)
 	frame.resized.connect(_fit_desktop)
 	_fit_desktop.call_deferred()
 
@@ -83,14 +83,14 @@ func _fit_desktop() -> void:
 
 func _sync_from_monitor() -> void:
 	var monitor := get_tree().get_first_node_in_group("cctv_monitor")
-	if monitor != null and "is_open" in monitor:
-		desktop.show_cctv(monitor.is_open)
+	if monitor != null and "app" in monitor:
+		desktop.apply_app(monitor.app)
 
 
-func _on_desktop_cctv_toggled(value: bool) -> void:
+func _on_desktop_app_changed(app: String) -> void:
 	var monitor := get_tree().get_first_node_in_group("cctv_monitor")
-	if monitor != null and monitor.has_method("set_open"):
-		monitor.set_open(value)
+	if monitor != null and monitor.has_method("set_app"):
+		monitor.set_app(app)
 
 
 func _on_dim_gui_input(event: InputEvent) -> void:

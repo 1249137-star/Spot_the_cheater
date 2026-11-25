@@ -136,6 +136,7 @@ theme_override_constants/separation = 4
 custom_minimum_size = Vector2(56, 56)
 layout_mode = 2
 mouse_default_cursor_shape = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("Style_icon_excel")
 
 [node name="Letter" type="Label" parent="Icons/ShortcutExcel/Icon"]
@@ -169,6 +170,7 @@ theme_override_constants/separation = 4
 [node name="Icon" type="Panel" parent="Icons/ShortcutGPT"]
 custom_minimum_size = Vector2(56, 56)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("Style_icon_gpt")
 
@@ -308,6 +310,128 @@ offset_top = 38.0
 offset_right = -8.0
 offset_bottom = -8.0
 
+[node name="ExcelWindow" type="Panel" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 788.0
+offset_bottom = 430.0
+theme_override_styles/panel = SubResource("Style_window")
+
+[node name="TitleBar" type="ColorRect" parent="ExcelWindow"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 775.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.1, 0.14, 0.19, 1)
+
+[node name="Title" type="Label" parent="ExcelWindow"]
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 400.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.85, 0.91, 0.97, 1)
+theme_override_font_sizes/font_size = 15
+text = "Excel – Ведомость группы"
+
+[node name="CloseButton" type="Button" parent="ExcelWindow"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = 28.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 16
+text = "×"
+
+[node name="Sheet" type="Control" parent="ExcelWindow"]
+offset_left = 8.0
+offset_top = 38.0
+offset_right = 768.0
+offset_bottom = 378.0
+mouse_filter = 2
+
+[node name="GptWindow" type="Panel" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 788.0
+offset_bottom = 430.0
+theme_override_styles/panel = SubResource("Style_window")
+
+[node name="TitleBar" type="ColorRect" parent="GptWindow"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 775.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.1, 0.14, 0.19, 1)
+
+[node name="Title" type="Label" parent="GptWindow"]
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 400.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.85, 0.91, 0.97, 1)
+theme_override_font_sizes/font_size = 15
+text = "GPT – помощник"
+
+[node name="CloseButton" type="Button" parent="GptWindow"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = 28.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 16
+text = "×"
+
+[node name="Messages" type="VBoxContainer" parent="GptWindow"]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 764.0
+offset_bottom = 318.0
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="InputBar" type="Panel" parent="GptWindow"]
+offset_left = 12.0
+offset_top = 326.0
+offset_right = 764.0
+offset_bottom = 378.0
+theme_override_styles/panel = SubResource("Style_app")
+
+[node name="Placeholder" type="Label" parent="GptWindow/InputBar"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 600.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.55, 0.62, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Спросите что-нибудь…"
+
+[node name="Send" type="Label" parent="GptWindow/InputBar"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.42, 0.72, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Отправить"
+horizontal_alignment = 2
+
 [node name="Taskbar" type="Panel" parent="."]
 offset_top = 432.0
 offset_right = 800.0
@@ -393,6 +517,7 @@ color = Color(0.29, 0.64, 1, 1)
 [node name="AppExcel" type="Panel" parent="Taskbar/Apps"]
 custom_minimum_size = Vector2(92, 34)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("Style_app")
 
 [node name="Label" type="Label" parent="Taskbar/Apps/AppExcel"]
@@ -408,9 +533,24 @@ text = "Excel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Active" type="ColorRect" parent="Taskbar/Apps/AppExcel"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.29, 0.64, 1, 1)
+
 [node name="AppGPT" type="Panel" parent="Taskbar/Apps"]
 custom_minimum_size = Vector2(84, 34)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("Style_app")
 
 [node name="Label" type="Label" parent="Taskbar/Apps/AppGPT"]
@@ -425,6 +565,20 @@ theme_override_font_sizes/font_size = 13
 text = "GPT"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Active" type="ColorRect" parent="Taskbar/Apps/AppGPT"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.29, 0.64, 1, 1)
 
 [node name="Hint" type="Label" parent="Taskbar"]
 anchor_left = 1.0
