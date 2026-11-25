@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://bgqqeqq4pjgex"]
+[gd_scene load_steps=54 format=3 uid="uid://bgqqeqq4pjgex"]
 
 [sub_resource type="StandardMaterial3D" id="Mat_floor"]
 albedo_color = Color(0.78, 0.63, 0.45, 1)
@@ -151,6 +151,9 @@ size = Vector3(0.04, 0.71, 0.86)
 
 [sub_resource type="BoxMesh" id="Mesh_desk_modesty_teacher"]
 size = Vector3(1.92, 0.35, 0.02)
+
+[sub_resource type="BoxShape3D" id="Shape_teacher_seat"]
+size = Vector3(0.7, 1, 0.7)
 
 [sub_resource type="Environment" id="Env"]
 background_mode = 1
@@ -1384,6 +1387,17 @@ mesh = SubResource("Mesh_chair_base")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, 2.51258)
 material_override = SubResource("Mat_keyboard")
 mesh = SubResource("Mesh_chair_column")
+
+[node name="TeacherSeat" type="StaticBody3D" parent="Teacher" groups=["teacher_seat"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 2.51258)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Teacher/TeacherSeat"]
+shape = SubResource("Shape_teacher_seat")
+
+[node name="SitPoint" type="Marker3D" parent="Teacher/TeacherSeat"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Lighting" type="Node3D" parent="."]
 
