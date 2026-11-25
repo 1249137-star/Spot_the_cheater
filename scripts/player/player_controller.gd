@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.002
 @export var gravity: float = 9.8
 @export var sit_distance: float = 1.0
+@export var stand_step: float = 0.8
 
 @onready var camera: Camera3D = $Camera3D
 @onready var ray: RayCast3D = $Camera3D/RayCast3D
@@ -15,9 +16,7 @@ extends CharacterBody3D
 var _is_seated: bool = false
 var _seat_yaw: float = 0.0
 var _seat_pitch: float = 0.0
-var _saved_player_rotation: Vector3 = Vector3.ZERO
 var _saved_camera_position: Vector3 = Vector3.ZERO
-var _saved_camera_rotation: Vector3 = Vector3.ZERO
 
 
 func _ready() -> void:
@@ -93,9 +92,7 @@ func _try_interact() -> void:
 
 
 func _sit(seat_position: Vector3) -> void:
-	_saved_player_rotation = rotation
 	_saved_camera_position = camera.position
-	_saved_camera_rotation = camera.rotation
 
 	_is_seated = true
 	velocity = Vector3.ZERO
@@ -109,8 +106,18 @@ func _sit(seat_position: Vector3) -> void:
 
 
 func _stand() -> void:
-	_is_seated = false
-	rotation = _saved_player_rotation
+	var yaw := _seat_yaw
+	var forward := Vector3(-sin(yaw), 0.0, -cos(yaw))
+	var step := 0.0
+
+	for distance in [stand_step, stand_step * 0.75, stand_step * 0.5, stand_step * 0.25]:
+		if not test_move(global_transform, forward * distance):
+			step = distance
+			break
+
+	global_position += forward * step
+	rotation = Vector3(0.0, yaw, 0.0)
 	camera.position = _saved_camera_position
-	camera.rotation = _saved_camera_rotation
-	print("[Стул] Встал")
+	camera.rotation = Vector3.ZERO
+	_is_seated = false
+	print("[Стул] Встал, шаг %.2f м" % step)
