@@ -7,6 +7,8 @@ extends CharacterBody3D
 @export var speed: float = 1.6
 @export var mouse_sensitivity: float = 0.002
 @export var gravity: float = 9.8
+@export var fall_gravity_scale: float = 1.6
+@export var jump_velocity: float = 2.8
 @export var sit_distance: float = 1.0
 @export var stand_step: float = 0.8
 
@@ -49,7 +51,12 @@ func _physics_process(delta: float) -> void:
 		return
 
 	if not is_on_floor():
-		velocity.y -= gravity * delta
+		var current_gravity := gravity
+		if velocity.y < 0.0:
+			current_gravity *= fall_gravity_scale
+		velocity.y -= current_gravity * delta
+	elif Input.is_action_just_pressed("jump"):
+		velocity.y = jump_velocity
 
 	var input := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction := (transform.basis * Vector3(input.x, 0.0, input.y)).normalized()
