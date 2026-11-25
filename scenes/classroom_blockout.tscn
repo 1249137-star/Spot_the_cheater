@@ -1,5 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://bgqqeqq4pjgex"]
-[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="4_player"]
+[gd_scene load_steps=53 format=3 uid="uid://bgqqeqq4pjgex"]
 
 
 [sub_resource type="StandardMaterial3D" id="Mat_floor"]
@@ -1492,6 +1491,3 @@ shape = SubResource("Shape_desk_side")
 [node name="Desk_Teacher" type="CollisionShape3D" parent="DeskCollision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 1.91258)
 shape = SubResource("Shape_desk_teacher")
-
-[node name="Player" parent="." instance=ExtResource("4_player")]
-position = Vector3(0, 0.05, 5)
