@@ -1,0 +1,594 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/pc_desktop.gd" id="1_desktop"]
+[ext_resource type="PackedScene" path="res://scenes/ui/cctv_grid.tscn" id="2_grid"]
+
+[sub_resource type="Gradient" id="Gradient_bg"]
+colors = PackedColorArray(0.06, 0.14, 0.28, 1, 0.02, 0.04, 0.09, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_bg"]
+gradient = SubResource("Gradient_bg")
+width = 128
+height = 128
+fill_from = Vector2(0, 0)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="Style_top_bar"]
+bg_color = Color(0.05, 0.08, 0.12, 0.94)
+
+[sub_resource type="StyleBoxFlat" id="Style_taskbar"]
+bg_color = Color(0.04, 0.06, 0.09, 0.97)
+
+[sub_resource type="StyleBoxFlat" id="Style_window"]
+bg_color = Color(0.07, 0.1, 0.13, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.36, 0.46, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="Style_app"]
+bg_color = Color(0.1, 0.14, 0.19, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="Style_start"]
+bg_color = Color(0.14, 0.2, 0.28, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="Style_icon_cctv"]
+bg_color = Color(0.15, 0.35, 0.6, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="Style_icon_excel"]
+bg_color = Color(0.16, 0.42, 0.24, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="Style_icon_gpt"]
+bg_color = Color(0.13, 0.38, 0.38, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PcDesktop" type="Control"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_desktop")
+
+[node name="Wallpaper" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture_bg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="Icons" type="VBoxContainer" parent="."]
+offset_left = 18.0
+offset_top = 58.0
+offset_right = 92.0
+offset_bottom = 320.0
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="ShortcutCCTV" type="VBoxContainer" parent="Icons"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Panel" parent="Icons/ShortcutCCTV"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("Style_icon_cctv")
+
+[node name="Letter" type="Label" parent="Icons/ShortcutCCTV/Icon"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Icons/ShortcutCCTV"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.6)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "CCTV"
+horizontal_alignment = 1
+
+[node name="ShortcutExcel" type="VBoxContainer" parent="Icons"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Panel" parent="Icons/ShortcutExcel"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("Style_icon_excel")
+
+[node name="Letter" type="Label" parent="Icons/ShortcutExcel/Icon"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Icons/ShortcutExcel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.6)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Excel"
+horizontal_alignment = 1
+
+[node name="ShortcutGPT" type="VBoxContainer" parent="Icons"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Panel" parent="Icons/ShortcutGPT"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("Style_icon_gpt")
+
+[node name="Letter" type="Label" parent="Icons/ShortcutGPT/Icon"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Icons/ShortcutGPT"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.6)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "GPT"
+horizontal_alignment = 1
+
+[node name="TopBar" type="Panel" parent="."]
+offset_right = 800.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("Style_top_bar")
+
+[node name="Title" type="Label" parent="TopBar"]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 320.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.72, 0.8, 0.88, 1)
+theme_override_font_sizes/font_size = 14
+text = "Класс 204 · ПК преподавателя"
+
+[node name="RightBlock" type="HBoxContainer" parent="TopBar"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -440.0
+offset_top = 10.0
+offset_right = -12.0
+offset_bottom = 32.0
+grow_horizontal = 0
+alignment = 2
+theme_override_constants/separation = 14
+
+[node name="WifiDot" type="Label" parent="TopBar/RightBlock"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.9, 0.45, 1)
+theme_override_font_sizes/font_size = 11
+text = "●"
+
+[node name="Wifi" type="Label" parent="TopBar/RightBlock"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.86, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Wi-Fi"
+
+[node name="Weather" type="Label" parent="TopBar/RightBlock"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.86, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Погода +3°C"
+
+[node name="Date" type="Label" parent="TopBar/RightBlock"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.86, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Чт, 26.11"
+
+[node name="Clock" type="Label" parent="TopBar/RightBlock"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "09:41"
+
+[node name="CCTVWindow" type="Panel" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 788.0
+offset_bottom = 430.0
+theme_override_styles/panel = SubResource("Style_window")
+
+[node name="TitleBar" type="ColorRect" parent="CCTVWindow"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 775.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.1, 0.14, 0.19, 1)
+
+[node name="Title" type="Label" parent="CCTVWindow"]
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 400.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.85, 0.91, 0.97, 1)
+theme_override_font_sizes/font_size = 15
+text = "CCTV – 15 камер"
+
+[node name="TitleHint" type="Label" parent="CCTVWindow"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 6.0
+offset_right = -46.0
+offset_bottom = 26.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.6, 0.7, 0.78, 1)
+theme_override_font_sizes/font_size = 13
+text = "клик по значку – закрыть"
+horizontal_alignment = 2
+
+[node name="CloseButton" type="Button" parent="CCTVWindow"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = 28.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 16
+text = "×"
+
+[node name="Feed" parent="CCTVWindow" instance=ExtResource("2_grid")]
+offset_left = 8.0
+offset_top = 38.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="ExcelWindow" type="Panel" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 788.0
+offset_bottom = 430.0
+theme_override_styles/panel = SubResource("Style_window")
+
+[node name="TitleBar" type="ColorRect" parent="ExcelWindow"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 775.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.1, 0.14, 0.19, 1)
+
+[node name="Title" type="Label" parent="ExcelWindow"]
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 400.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.85, 0.91, 0.97, 1)
+theme_override_font_sizes/font_size = 15
+text = "Excel – Ведомость группы"
+
+[node name="CloseButton" type="Button" parent="ExcelWindow"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = 28.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 16
+text = "×"
+
+[node name="Sheet" type="Control" parent="ExcelWindow"]
+offset_left = 8.0
+offset_top = 38.0
+offset_right = 768.0
+offset_bottom = 378.0
+mouse_filter = 2
+
+[node name="GptWindow" type="Panel" parent="."]
+visible = false
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 788.0
+offset_bottom = 430.0
+theme_override_styles/panel = SubResource("Style_window")
+
+[node name="TitleBar" type="ColorRect" parent="GptWindow"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 775.0
+offset_bottom = 31.0
+mouse_filter = 2
+color = Color(0.1, 0.14, 0.19, 1)
+
+[node name="Title" type="Label" parent="GptWindow"]
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 400.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.85, 0.91, 0.97, 1)
+theme_override_font_sizes/font_size = 15
+text = "GPT – помощник"
+
+[node name="CloseButton" type="Button" parent="GptWindow"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_top = 5.0
+offset_right = -8.0
+offset_bottom = 28.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 16
+text = "×"
+
+[node name="Messages" type="VBoxContainer" parent="GptWindow"]
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 764.0
+offset_bottom = 318.0
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="InputBar" type="Panel" parent="GptWindow"]
+offset_left = 12.0
+offset_top = 326.0
+offset_right = 764.0
+offset_bottom = 378.0
+theme_override_styles/panel = SubResource("Style_app")
+
+[node name="Placeholder" type="Label" parent="GptWindow/InputBar"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 600.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.55, 0.62, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Спросите что-нибудь…"
+
+[node name="Send" type="Label" parent="GptWindow/InputBar"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.42, 0.72, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Отправить"
+horizontal_alignment = 2
+
+[node name="Taskbar" type="Panel" parent="."]
+offset_top = 432.0
+offset_right = 800.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("Style_taskbar")
+
+[node name="Start" type="Panel" parent="Taskbar"]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 44.0
+offset_bottom = 42.0
+theme_override_styles/panel = SubResource("Style_start")
+
+[node name="StartGrid" type="GridContainer" parent="Taskbar/Start"]
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 31.0
+offset_bottom = 31.0
+columns = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="Sq1" type="ColorRect" parent="Taskbar/Start/StartGrid"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+color = Color(0.78, 0.86, 0.94, 1)
+
+[node name="Sq2" type="ColorRect" parent="Taskbar/Start/StartGrid"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+color = Color(0.78, 0.86, 0.94, 1)
+
+[node name="Sq3" type="ColorRect" parent="Taskbar/Start/StartGrid"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+color = Color(0.78, 0.86, 0.94, 1)
+
+[node name="Sq4" type="ColorRect" parent="Taskbar/Start/StartGrid"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+color = Color(0.78, 0.86, 0.94, 1)
+
+[node name="Apps" type="HBoxContainer" parent="Taskbar"]
+offset_left = 54.0
+offset_top = 7.0
+offset_right = 430.0
+offset_bottom = 41.0
+theme_override_constants/separation = 6
+
+[node name="AppCCTV" type="Panel" parent="Taskbar/Apps"]
+custom_minimum_size = Vector2(92, 34)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("Style_app")
+
+[node name="Label" type="Label" parent="Taskbar/Apps/AppCCTV"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 13
+text = "CCTV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Active" type="ColorRect" parent="Taskbar/Apps/AppCCTV"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.29, 0.64, 1, 1)
+
+[node name="AppExcel" type="Panel" parent="Taskbar/Apps"]
+custom_minimum_size = Vector2(92, 34)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("Style_app")
+
+[node name="Label" type="Label" parent="Taskbar/Apps/AppExcel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.55, 0.62, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Excel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Active" type="ColorRect" parent="Taskbar/Apps/AppExcel"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.29, 0.64, 1, 1)
+
+[node name="AppGPT" type="Panel" parent="Taskbar/Apps"]
+custom_minimum_size = Vector2(84, 34)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("Style_app")
+
+[node name="Label" type="Label" parent="Taskbar/Apps/AppGPT"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.55, 0.62, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "GPT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Active" type="ColorRect" parent="Taskbar/Apps/AppGPT"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -3.0
+offset_right = -8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.29, 0.64, 1, 1)
+
+[node name="Hint" type="Label" parent="Taskbar"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -330.0
+offset_top = 14.0
+offset_right = -12.0
+offset_bottom = 34.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.6, 0.68, 0.76, 1)
+theme_override_font_sizes/font_size = 12
+text = "C – на весь экран"
+horizontal_alignment = 2
