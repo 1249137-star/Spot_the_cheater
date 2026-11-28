@@ -1,7 +1,8 @@
-[gd_scene load_steps=51 format=3 uid="uid://bgqqeqq4pjgex"]
+[gd_scene load_steps=52 format=3 uid="uid://bgqqeqq4pjgex"]
 [ext_resource type="PackedScene" uid="uid://vk0e2j13xxl3" path="res://assets/models/chair.glb" id="7_chair"]
 [ext_resource type="PackedScene" uid="uid://dgwhkckanmh1a" path="res://assets/models/student_sitting.glb" id="8_student"]
 [ext_resource type="PackedScene" uid="uid://bhxdg43eb7rb4" path="res://assets/models/student_pashkevich.glb" id="9_student2"]
+[ext_resource type="PackedScene" uid="uid://b62svrap6tg0k" path="res://assets/models/student_arseny.glb" id="10_student3"]
 
 [sub_resource type="StandardMaterial3D" id="Mat_floor"]
 albedo_color = Color(0.78, 0.63, 0.45, 1)
@@ -344,6 +345,9 @@ material_override = SubResource("Mat_keyboard")
 mesh = SubResource("Mesh_keyboard_side")
 
 [node name="Chair_C1" parent="Desks" instance=ExtResource("7_chair")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.05, 0, -0.72)
+
+[node name="Student_C1" parent="Desks" instance=ExtResource("10_student3")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -1.05, 0, -0.72)
 
 [node name="Keyboard_C2" type="MeshInstance3D" parent="Desks"]
